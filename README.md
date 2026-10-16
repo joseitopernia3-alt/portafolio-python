@@ -1,21 +1,9 @@
-# Scraper de precios a Excel
+# Portafolio de automatización con Python
 
-Descarga título, precio, calificación y disponibilidad de libros desde
-[books.toscrape.com](https://books.toscrape.com) (sitio hecho para practicar
-scraping) y los guarda en Excel y CSV.
+Tres proyectos pequeños y funcionales:
 
-*English: web scraper that extracts book titles, prices, ratings and availability into Excel/CSV.*
+1. **01-reporte-excel**: reporte automático de ventas en Excel (pandas, openpyxl)
+2. **02-bot-telegram**: bot de catálogo para negocios (python-telegram-bot)
+3. **03-scraper-precios**: extracción de datos web a Excel (requests, BeautifulSoup)
 
-## Cómo usarlo
-```bash
-pip install -r requirements.txt
-python scraper_libros.py              # 3 páginas
-python scraper_libros.py --paginas 10
-```
-Genera `libros.xlsx` y `libros.csv`.
-
-Incluye reintentos si falla la conexión y una pausa entre peticiones para no
-saturar el sitio. Para otra página web solo hay que cambiar los selectores en
-la función `extraer_libros`.
-
-Hecho con Python, requests, BeautifulSoup y pandas.
+Cada carpeta tiene su propio README con instrucciones.
