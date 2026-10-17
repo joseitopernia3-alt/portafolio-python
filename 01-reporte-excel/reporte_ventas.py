@@ -119,6 +119,10 @@ def dar_formato(escritor, hojas_con_grafico: dict) -> None:
         etiquetas = Reference(hoja, min_col=1, min_row=2, max_row=hoja.max_row)
         grafico.add_data(datos, titles_from_data=True)
         grafico.set_categories(etiquetas)
+        # Las versiones nuevas de openpyxl ocultan los ejes por defecto: se activan aqui.
+        grafico.x_axis.delete = False
+        grafico.y_axis.delete = False
+        grafico.y_axis.title = "Total vendido"
         grafico.height, grafico.width = 8, 16
         hoja.add_chart(grafico, "G2")
 
